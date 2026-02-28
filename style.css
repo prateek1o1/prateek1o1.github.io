@@ -5,26 +5,28 @@
 }
 
 :root {
-    --primary: #00fff9;
-    --secondary: #ff00de;
-    --accent: #7b2ff7;
-    --dark: #0a0e27;
-    --darker: #050816;
-    --light: #e0e7ff;
-    --card-bg: rgba(10, 14, 39, 0.8);
-    --text: #e0e7ff;
-    --text-dim: #8b92b8;
-    --bg: #050816;
+    --primary: #a78bfa;
+    --secondary: #c084fc;
+    --accent: #8b5cf6;
+    --dark: #1a1625;
+    --darker: #0f0a1a;
+    --light: #e9d5ff;
+    --card-bg: rgba(26, 22, 37, 0.85);
+    --text: #e9d5ff;
+    --text-dim: #c4b5fd;
+    --bg: #0f0a1a;
 }
 
 [data-theme="light"] {
-    --dark: #e0e7ff;
-    --darker: #f8fafc;
-    --light: #0a0e27;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --text: #0a0e27;
-    --text-dim: #64748b;
-    --bg: #f8fafc;
+    --dark: #faf5ff;
+    --darker: #ffffff;
+    --light: #1a1625;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text: #1a1625;
+    --text-dim: #7c3aed;
+    --bg: #faf5ff;
+    --primary: #8b5cf6;
+    --secondary: #a78bfa;
 }
 
 html {
@@ -37,6 +39,8 @@ body {
     color: var(--text);
     overflow-x: hidden;
     cursor: none;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 #neural-network {
@@ -99,7 +103,7 @@ nav ul {
 nav a {
     color: var(--text);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s;
@@ -285,7 +289,7 @@ nav a:hover {
 
 .hero-subtitle {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-dim);
     margin-bottom: 3rem;
 }
@@ -578,7 +582,7 @@ nav a:hover {
 }
 
 .timeline-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--text);
     margin-bottom: 0.5rem;
 }
@@ -586,6 +590,7 @@ nav a:hover {
 .timeline-company {
     color: var(--text-dim);
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .edu-grid {
@@ -685,7 +690,7 @@ nav a:hover {
 }
 
 .project-title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--text);
     margin-bottom: 1rem;
 }
@@ -693,7 +698,8 @@ nav a:hover {
 .project-desc {
     color: var(--text-dim);
     margin-bottom: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1.05rem;
 }
 
 .project-tech {
@@ -810,9 +816,14 @@ footer {
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
     nav {
         flex-direction: column;
         padding: 1rem;
+        gap: 1rem;
     }
     
     nav ul {
@@ -821,8 +832,28 @@ footer {
         gap: 1rem;
     }
     
+    nav a {
+        font-size: 0.95rem;
+    }
+    
+    .hero {
+        padding: 6rem 1.5rem 3rem;
+    }
+    
     .hero-title {
         font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-parallax {
+        padding: 4rem 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
     }
     
     .metrics-grid,
@@ -831,9 +862,44 @@ footer {
     .projects-grid,
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
     
     .cta-group {
         flex-direction: column;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+    
+    .timeline {
+        padding-left: 2rem;
+    }
+    
+    .timeline-marker {
+        left: -2.5rem;
+    }
+    
+    .holo-card {
+        padding: 1.5rem;
+    }
+    
+    #cursor-glow {
+        display: none;
+    }
+    
+    body {
+        cursor: auto;
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .tech-chip,
+    #theme-toggle,
+    #scroll-top {
+        cursor: pointer;
     }
 }
