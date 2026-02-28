@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Chhimwal - Neural Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="neural-network"></canvas>
+    <div id="cursor-glow"></div>
+    
+    <nav id="navbar">
+        <h1 class="logo-glitch" data-text="PRATEEK.CHHIMWAL">PRATEEK.CHHIMWAL</h1>
+        <ul>
+            <li><a href="#about"><span class="nav-icon">◉</span> About</a></li>
+            <li><a href="#experience"><span class="nav-icon">◈</span> Experience</a></li>
+            <li><a href="#education"><span class="nav-icon">◊</span> Education</a></li>
+            <li><a href="#certifications"><span class="nav-icon">◐</span> Certifications</a></li>
+            <li><a href="#projects"><span class="nav-icon">◎</span> Projects</a></li>
+            <li><a href="#contact"><span class="nav-icon">◉</span> Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <span class="theme-icon">◐</span>
+        </button>
+    </nav>
+
+    <div class="hero">
+        <div class="scan-line"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="status-bar">
+                <span class="status-dot"></span>
+                <span class="status-text">SYSTEM ONLINE</span>
+                <span class="timestamp" id="timestamp"></span>
+            </div>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="command">whoami</span></p>
+                    <p class="terminal-output typing-text" id="typing-output"></p>
+                </div>
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="title-line" data-text="SOFTWARE">SOFTWARE</span>
+                <span class="title-line" data-text="DEVELOPMENT">DEVELOPMENT</span>
+                <span class="title-line" data-text="ENGINEER">ENGINEER</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                <span class="bracket">[</span>
+                <span class="typewriter-text" id="role-text"></span>
+                <span class="cursor-blink">_</span>
+                <span class="bracket">]</span>
+            </p>
+            
+            <div class="cta-group">
+                <a href="Prateek_Chhimwal_Resume.pdf" download class="btn-primary">
+                    <span class="btn-icon">↓</span>
+                    <span class="btn-text">DOWNLOAD.RESUME</span>
+                    <span class="btn-glow"></span>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <span class="btn-icon">→</span>
+                    <span class="btn-text">INITIALIZE.CONTACT</span>
+                </a>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">
+                        <span class="counter" data-target="2">0</span>
+                        <span class="metric-plus">+</span>
+                    </div>
+                    <div class="metric-label">YEARS_ACTIVE</div>
+                    <div class="metric-bar"><div class="metric-fill" style="width: 40%"></div></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">
+                        <span class="counter" data-target="5">0</span>
+                        <span class="metric-plus">+</span>
+                    </div>
+                    <div class="metric-label">PROJECTS_DEPLOYED</div>
+                    <div class="metric-bar"><div class="metric-fill" style="width: 70%"></div></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">
+                        <span class="counter" data-target="4">0</span>
+                    </div>
+                    <div class="metric-label">CERTIFICATIONS</div>
+                    <div class="metric-bar"><div class="metric-fill" style="width: 100%"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">SCROLL_TO_EXPLORE</span>
+            <span class="scroll-arrow">↓</span>
+        </div>
+    </div>
+
+    <section id="about" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">ABOUT.PROFILE</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="holo-card">
+            <div class="holo-border"></div>
+            <div class="card-content">
+                <p class="bio-text">I hold a Master's degree in Computer Science and currently work as a Software Development Engineer at Ericsson, specializing in router firmware development for the network platform firmware team. My expertise lies in low-level systems programming, network protocols, and embedded firmware solutions.</p>
+                <div class="tech-stack">
+                    <div class="stack-label">TECH_STACK://</div>
+                    <div class="tech-grid">
+                        <span class="tech-chip" data-level="95">C/C++</span>
+                        <span class="tech-chip" data-level="90">Firmware</span>
+                        <span class="tech-chip" data-level="85">Network Protocols</span>
+                        <span class="tech-chip" data-level="88">Embedded Systems</span>
+                        <span class="tech-chip" data-level="80">Python</span>
+                        <span class="tech-chip" data-level="75">React.js</span>
+                        <span class="tech-chip" data-level="70">Spring Boot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">EXPERIENCE.LOG</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item holo-card">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2024.01 → PRESENT</div>
+                    <h3 class="timeline-title">Software Development Engineer</h3>
+                    <div class="timeline-company">Ericsson Enterprise Wireless Solutions India Pvt. Ltd.</div>
+                    <p class="timeline-desc">Developing and maintaining router firmware for network platform systems. Working on low-level firmware components, network protocols implementation, and system optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">EDUCATION.DATA</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="edu-grid">
+            <div class="edu-card holo-card">
+                <div class="edu-degree">M.TECH</div>
+                <h3>Computer Science & Engineering</h3>
+                <div class="edu-institution">IIIT Bangalore</div>
+                <div class="edu-period">2022.07 → 2024.07</div>
+                <div class="edu-grade">GPA: 3.58/4.00</div>
+            </div>
+            <div class="edu-card holo-card">
+                <div class="edu-degree">B.TECH</div>
+                <h3>Computer Science & Engineering</h3>
+                <div class="edu-institution">DIT University</div>
+                <div class="edu-period">2017 → 2021</div>
+                <div class="edu-grade">GPA: 9.28/10.00</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2 class="section-title">CERTIFICATIONS.VERIFIED</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="cert-grid">
+            <div class="cert-card holo-card">
+                <div class="cert-icon">◈</div>
+                <h3>Full Stack Project: Spring Boot 2.0, ReactJS, Redux</h3>
+                <div class="cert-issuer">Udemy • 2023.07</div>
+                <div class="cert-skills">React.js • Spring Boot • MySQL</div>
+                <a href="Full Stack Project- Spring Boot 2.0, ReactJS, Redux.pdf" target="_blank" class="cert-link">VIEW_CERTIFICATE →</a>
+            </div>
+            <div class="cert-card holo-card">
+                <div class="cert-icon">◈</div>
+                <h3>Introduction of AI & IoT</h3>
+                <div class="cert-issuer">IIT Kanpur • 2019.07</div>
+                <a href="iSmriti.pdf" target="_blank" class="cert-link">VIEW_CERTIFICATE →</a>
+            </div>
+            <div class="cert-card holo-card">
+                <div class="cert-icon">◈</div>
+                <h3>Complete Python Bootcamp</h3>
+                <div class="cert-issuer">Udemy • 2019.03</div>
+                <a href="Complete Python Bootcamp- Go from zero to hero in Python 3.pdf" target="_blank" class="cert-link">VIEW_CERTIFICATE →</a>
+            </div>
+            <div class="cert-card holo-card">
+                <div class="cert-icon">◈</div>
+                <h3>Algorithms and Data Structures in C++</h3>
+                <div class="cert-issuer">Udemy • 2019.02</div>
+                <a href="Introduction to Algorithms and Data structures in C++.pdf" target="_blank" class="cert-link">VIEW_CERTIFICATE →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">PROJECTS.ARCHIVE</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card holo-card">
+                <div class="project-header">
+                    <div class="project-status">DEPLOYED</div>
+                    <div class="project-date">2023.01 → 2023.05</div>
+                </div>
+                <h3 class="project-title">Hospital System × ABDM Integration</h3>
+                <p class="project-desc">Comprehensive hospital health information system with ABDM sandbox integration. Implemented FHIR compliance standards for seamless health record exchange.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Spring Boot</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">ABDM</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/prateek1o1/Healthcare-Frontend" class="project-link">FRONTEND →</a>
+                    <a href="https://github.com/prateek1o1/Healthcare-Backend" class="project-link">BACKEND →</a>
+                </div>
+            </div>
+            
+            <div class="project-card holo-card">
+                <div class="project-header">
+                    <div class="project-status">DEPLOYED</div>
+                    <div class="project-date">2023.04 → 2023.05</div>
+                </div>
+                <h3 class="project-title">My Task Guru</h3>
+                <p class="project-desc">DevOps pipeline architecture with robust CI/CD implementation and containerization for seamless application delivery.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Jenkins</span>
+                    <span class="tech-tag">Ansible</span>
+                    <span class="tech-tag">ELK</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/prateek1o1/MyTaskGuru-Fullstack" class="project-link">VIEW_CODE →</a>
+                </div>
+            </div>
+            
+            <div class="project-card holo-card">
+                <div class="project-header">
+                    <div class="project-status">RESEARCH</div>
+                    <div class="project-date">2022.09 → 2022.12</div>
+                </div>
+                <h3 class="project-title">Ad Worthy Prediction Engine</h3>
+                <p class="project-desc">ML model predicting high-traffic web pages using NLP techniques for textual property analysis.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">NLP</span>
+                    <span class="tech-tag">ML</span>
+                    <span class="tech-tag">Jupyter</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/prateek1o1/Aid-escalating-internet-coverage" class="project-link">VIEW_CODE →</a>
+                </div>
+            </div>
+            
+            <div class="project-card holo-card">
+                <div class="project-header">
+                    <div class="project-status">PROTOTYPE</div>
+                    <div class="project-date">2019.06 → 2019.07</div>
+                </div>
+                <h3 class="project-title">AI Mobile Robot</h3>
+                <p class="project-desc">AI-enabled robot with ultrasonic obstacle detection and PWM-controlled DC motors for precise autonomous movement.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Raspberry Pi</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">AI</span>
+                </div>
+            </div>
+            
+            <div class="project-card holo-card">
+                <div class="project-header">
+                    <div class="project-status">PROTOTYPE</div>
+                    <div class="project-date">2019.06 → 2019.07</div>
+                </div>
+                <h3 class="project-title">IoT Attendance System</h3>
+                <p class="project-desc">IoT-based attendance monitoring with webcam QR code scanning and CSV export functionality.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Raspberry Pi</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">CV</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/prateek1o1/IoT-Attendance-Monitoring-System-using-Raspberry-Pi" class="project-link">VIEW_CODE →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-parallax">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">CONTACT.INTERFACE</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card holo-card">
+                <div class="contact-icon">@</div>
+                <div class="contact-label">EMAIL.ADDRESS</div>
+                <a href="mailto:prateekchhimwal@gmail.com" class="contact-value">prateekchhimwal@gmail.com</a>
+            </div>
+            <div class="contact-card holo-card">
+                <div class="contact-icon">◎</div>
+                <div class="contact-label">GITHUB.PROFILE</div>
+                <a href="https://github.com/prateek1o1" class="contact-value">@prateek1o1</a>
+            </div>
+            <div class="contact-card holo-card">
+                <div class="contact-icon">◈</div>
+                <div class="contact-label">LINKEDIN.NETWORK</div>
+                <a href="https://linkedin.com/in/prateek-chhimwal-386b36169" class="contact-value">Prateek Chhimwal</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p class="footer-text">© 2026 PRATEEK.CHHIMWAL // ALL_RIGHTS_RESERVED</p>
+            <p class="footer-build">BUILD_v2.0.26 // NEURAL_INTERFACE</p>
+        </div>
+    </footer>
+
+    <button id="scroll-top" aria-label="Scroll to top">
+        <span class="scroll-icon">↑</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
