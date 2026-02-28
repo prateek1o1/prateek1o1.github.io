@@ -34,13 +34,14 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
     cursor: none;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 #neural-network {
@@ -746,6 +747,8 @@ nav a:hover {
 .contact-card {
     text-align: center;
     padding: 3rem 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
 }
 
 .contact-icon {
@@ -821,38 +824,66 @@ footer {
     }
     
     nav {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
+        flex-direction: row;
+        padding: 0.75rem 1rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .logo-glitch {
+        font-size: 0.9rem;
     }
     
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+    }
+    
+    nav ul.active {
+        display: flex;
     }
     
     nav a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    #theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
     }
     
     .hero {
-        padding: 6rem 1.5rem 3rem;
+        padding: 5rem 1.5rem 3rem;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .section-parallax {
-        padding: 4rem 1.5rem;
+        padding: 3rem 1.5rem;
     }
     
     .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-number {
         font-size: 2rem;
     }
     
@@ -872,7 +903,8 @@ footer {
     .btn-primary,
     .btn-secondary {
         justify-content: center;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        padding: 0.9rem 1.5rem;
     }
     
     .timeline {
@@ -885,6 +917,10 @@ footer {
     
     .holo-card {
         padding: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
     }
     
     #cursor-glow {
